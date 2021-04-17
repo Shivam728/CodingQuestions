@@ -1,2 +1,2 @@
 # CodingQuestions
-contains questio solved by me
+Contains questions solved by me
