@@ -1,0 +1,50 @@
+Converting a string to increment by a factor to its character
+...................................
+
+
+import java.util.*;
+
+
+
+import java.lang.*; 
+
+ public class practice
+{  private static Scanner sc = new Scanner(System.in);
+
+static char getoutput(char c, int increase) {
+	
+	if(Character.isLetter(c)) {
+		int i= c;
+		i= i+ increase;
+		
+		if(Character.isUpperCase(c) && i>90) {
+			i= i-26;
+		}else if(Character.isLowerCase(c) && i>122) {
+			i= i-26;
+			
+		}
+		return (char) i;
+		
+	}
+	
+	return c;
+}
+
+
+public static void main(String[] args) 
+{ 
+
+	int n= sc.nextInt();
+	sc.nextLine();
+	String s= sc.nextLine();
+	int k= sc.nextInt();
+	k= k%26;
+	String str="";
+	for(int i=0; i<n;i++) {
+		str= str+getoutput(s.charAt(i), k);
+	}
+	System.out.println(str);
+}
+}
+
+
